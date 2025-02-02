@@ -27,7 +27,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Log in a DockerHub
         run: |
-          echo "${{ secrets.DOCKER_PASSWD }}" | docker log in -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+          echo "${{ secrets.DOCKER_PASSWD }}" | docker log in -username "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
       # CHEKEAR COMO HAY QUE SUBIR LAS IMAGENES AL HUB POR PRIMERA VEZ
       - name: Build and push image
